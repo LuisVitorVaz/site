@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Firebase</title>
+    <style>
+        /* Estilo para a tabela */
+        table {
+            border: 1px solid black;
+            background-color: white; /* Cor de fundo branca para a tabela */
+            width: 80%; /* Largura da tabela (80% da largura do contêiner pai) */
+            margin: 0 auto; /* Centralizar a tabela na página */
+        }
+        /* Estilo para as células da tabela */
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        /* Estilo para o fundo da página */
+        body {
+            background-color: rgb(31, 175, 52); /* Cor de fundo verde para a página */
+            text-align: center; /* Centralizar o conteúdo na página */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Dados de Temperatura da esp32</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Temperatura</th>
+                </tr>
+            </thead>
+            <tbody id="dados-list"></tbody>
+        </table>
+
+        <!-- Botão para redirecionar para outra página -->
+        <button onclick="redirecionarParaOutraPagina()">Voltar a pagina Principal</button>
+    </div>
+
+    <script>
+        function redirecionarParaOutraPagina() {
+            // Altere o caminho da página conforme necessário
+            window.location.href = "./mapa.html";
+        }
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script type="module" src="./firebase.js"></script>    
+    <script type="module" src="./index.js"></script>
+    <!-- <script type="module" src="./configmapa.js"></script> -->
+</body>
+</html>
